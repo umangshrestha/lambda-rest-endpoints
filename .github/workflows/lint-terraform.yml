@@ -2,7 +2,7 @@ ame: Terraform Lint
 
 on:
   push:
-    paths:d
+    paths: infrastructure/**.tf
 
 jobs:
   lint:
