@@ -54,3 +54,6 @@ volume/
 __pycache__/
 .pytest_cache/
 *.pyc
+
+# Terraform plan output
+plan.out

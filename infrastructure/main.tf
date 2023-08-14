@@ -1,7 +1,7 @@
 provider "aws" {
-  access_key                  = var.aws_access_key
-  secret_key                  = var.aws_secret_key
-  region                      = var.aws_region
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
+  region     = var.aws_region
 
   skip_credentials_validation = true
   skip_metadata_api_check     = true
@@ -9,28 +9,28 @@ provider "aws" {
   skip_region_validation      = true
 
   endpoints {
-    apigateway     = "http://localhost:4566"
-    apigatewayv2   = "http://localhost:4566"
-    cloudformation = "http://localhost:4566"
-    cloudwatch     = "http://localhost:4566"
-    dynamodb       = "http://localhost:4566"
-    ec2            = "http://localhost:4566"
-    es             = "http://localhost:4566"
-    firehose       = "http://localhost:4566"
-    iam            = "http://localhost:4566"
-    kinesis        = "http://localhost:4566"
-    lambda         = "http://localhost:4566"
-    rds            = "http://localhost:4566"
-    redshift       = "http://localhost:4566"
-    route53        = "http://localhost:4566"
-    s3             = "http://s3.localhost.localstack.cloud:4566"
-    secretsmanager = "http://localhost:4566"
-    ses            = "http://localhost:4566"
-    sns            = "http://localhost:4566"
-    sqs            = "http://localhost:4566"
-    ssm            = "http://localhost:4566"
-    stepfunctions  = "http://localhost:4566"
-    sts            = "http://localhost:4566"
+    apigateway     = local.localstack_host
+    apigatewayv2   = local.localstack_host
+    cloudformation = local.localstack_host
+    cloudwatch     = local.localstack_host
+    dynamodb       = local.localstack_host
+    ec2            = local.localstack_host
+    es             = local.localstack_host
+    firehose       = local.localstack_host
+    iam            = local.localstack_host
+    kinesis        = local.localstack_host
+    lambda         = local.localstack_host
+    rds            = local.localstack_host
+    redshift       = local.localstack_host
+    route53        = local.localstack_host
+    s3             = local.s3_bucket_host
+    secretsmanager = local.localstack_host
+    ses            = local.localstack_host
+    sns            = local.localstack_host
+    sqs            = local.localstack_host
+    ssm            = local.localstack_host
+    stepfunctions  = local.localstack_host
+    sts            = local.localstack_host
   }
 }
 

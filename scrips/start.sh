@@ -4,7 +4,8 @@ docker-compose up -d
 echo "starting terraform"
 cd infrastructure
 terraform init
-terraform apply -auto-approve
+terraform plan -out plan.out
+terraform apply -auto-approve plan.out
 
 echo "starting tests"
 cd ..
