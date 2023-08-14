@@ -1,0 +1,56 @@
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+*.tfstate.tmp
+*.tfplan
+*.lock.hcl
+
+# Ignore local .terraform directories
+**/.terraform/*
+
+# Ignore any temporary files
+*~
+*.sw[a-p]
+*.sw[a-p][a-z]
+*.sw[a-p][a-z][a-z]
+
+# Ignore .DS_Store files (for macOS users)
+.DS_Store
+
+# Ignore .idea directory (for IntelliJ IDEA users)
+.idea
+
+# Ignore .vscode directory (for Visual Studio Code users)
+.vscode
+
+# Ignore sensitive files containing credentials or secrets
+*.pem
+*.p12
+*.key
+*.tfvars
+*.tfvars.json
+*.tfvars.tf
+*.secret
+*.cert
+*.ca
+
+# Ignore log files
+*.log
+*.txt
+
+# Ignore arifacts and archives
+artifacts/
+*.zip
+
+# Ignore persistence files
+volume/
+
+# Environment variables file
+.env
+.env.*
+.env.local
+
+# python cache
+__pycache__/
+.pytest_cache/
+*.pyc
