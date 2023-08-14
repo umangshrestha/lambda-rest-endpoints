@@ -5,7 +5,7 @@ from uuid import uuid4 as uuid
 from tests.config import lambda_client
 
 
-class LambdaBaseTestClass(TestCase):        
+class LambdaBaseTestClass(TestCase):      
     def hello(self, payload):
         result = lambda_client.invoke(
             FunctionName='hello',
@@ -39,7 +39,7 @@ class LambdaBaseTestClass(TestCase):
         output = json.loads(result['Payload'].read())
         output['body'] = json.loads(output['body'])
         return output
-    
+
     def delete_todo(self, _id):
         result = lambda_client.invoke(
             FunctionName='delete_todo',
